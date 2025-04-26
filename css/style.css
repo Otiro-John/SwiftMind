@@ -1,0 +1,370 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+:root {
+    --primary: #0A0F2C;
+    --actions: hsl(180, 100%, 40%);
+    --text: hsl(210, 20%, 98%);
+}
+html {
+    scroll-behavior: smooth;
+}
+h1 {
+    font-size: 4rem;
+    font-weight: 800;
+}
+h2 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+h3 {
+    font-size: 2rem;
+    font-weight: 600; 
+}
+p {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+button {
+    max-width: max-content;
+    min-height: 50px;
+    padding: 16px;
+    background: var(--actions);
+    border: none;
+    outline: none;
+    border-radius: 35px;
+    font-size: 1.2rem;
+    text-align: center;
+    cursor: pointer;
+}
+button a {
+    color: var(--text);
+    font-weight: 500;
+}
+
+header {
+    width: 100%;
+    background: var(--primary);
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+.navbar {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--text);
+}
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--actions);
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+.nav-links li a {
+    color: var(--text);
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+.nav-links li a:hover {
+    color: var(--actions);
+}
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    color: var(--actions);
+    cursor: pointer;
+}
+
+/* Responsive navbar */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background: var(--primary);
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+        display: none;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+    }
+}
+
+.home {
+    width: 100%;
+    min-height: 630px;
+    background-color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 120px 60px 20px 60px; /* add padding top because of fixed navbar */
+    flex-wrap: wrap;
+}
+.text-area {
+    width: 700px;
+    max-width: 100%;
+}
+.text-area h1,
+.text-area p {
+    color: var(--text);
+}
+.text-area p {
+    line-height: 50px;
+    padding: 16px 0;
+}
+.hero-image img {
+    width: 400px;
+    max-width: 100%;
+}
+
+#about {
+    padding-top: 100px;
+}
+.about {
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+.image-about img {
+    width: 400px;
+    max-width: 100%;
+    border-radius: 16px;
+}
+.about-text {
+    width: 600px;
+    max-width: 100%;
+}
+.about-text p {
+    color: #111;
+    padding: 16px 0;
+    line-height: 40px;
+}
+.about-text button {
+    height: 50px;
+    width: 200px;
+    border-radius: 12px;
+}
+
+#features {
+    padding-top: 100px;
+}
+.title {
+    width: 100%;
+    text-align: center;
+}
+.feature-content {
+    width: 100%;
+    min-height: 630px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+.feature {
+    width: 600px;
+    max-width: 100%;
+    height: 280px;
+    padding: 20px;
+    background: transparent;
+    border: 4px solid var(--actions);
+    border-radius: 16px;
+    text-align: center;
+}
+.feature i {
+    font-size: 1.5rem;
+    padding: 12px 0;
+    color: var(--actions);
+}
+.feature p {
+    color: #111;
+    padding: 12px 0;
+    line-height: 40px;
+}
+
+#testimonials {
+    padding: 100px 20px;
+}
+.testimonials {
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.testimonies {
+    width: 500px;
+    max-width: 100%;
+    height: 260px;
+    padding: 20px;
+    background: var(--primary);
+    border: 4px solid var(--actions);
+    text-align: center;
+    border-radius: 16px;
+}
+.testimonies img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.testimonies p {
+    padding: 12px 0;
+    line-height: 35px;
+    color: var(--text);
+}
+.testimonies h3 {
+    font-size: 1rem;
+    color: var(--text);
+}
+
+#contact {
+    padding: 100px 0;
+}
+#contact .title p {
+    color: #111;
+    padding: 16px 0;
+    line-height: 35px;
+}
+.contacts {
+    width: 100%;
+    min-height: 300px;
+    text-align: center;
+    margin-top: 20px;
+}
+.contacts input,
+.contacts textarea {
+    width: 500px;
+    max-width: 90%;
+    padding: 20px;
+    margin: 16px 0;
+}
+
+.footer {
+    width: 100%;
+    min-height: 100px;
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+}
+.links a {
+    color: var(--text);
+    text-decoration: underline;
+}
+.social-links {
+    display: flex;
+    gap: 16px;
+}
+.social-links i {
+    font-size: 1.5rem;
+    color: var(--actions);
+}
+.footer p{
+    color: var(--text);
+}
+
+/* Responsive improvements */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.5rem;
+        margin-top: 16%;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: 1.2rem;
+        line-height: 30px;
+    }
+    .home {
+        flex-direction: column;
+        min-height: auto;
+        padding: 120px 20px 20px;
+    }
+    .text-area {
+        width: 100%;
+        text-align: center;
+    }
+    .hero-image img {
+        width: 300px;
+    }
+    .about {
+        flex-direction: column;
+    }
+    .about-text {
+        text-align: center;
+    }
+    .feature-content {
+        flex-direction: column;
+        padding: 20px;
+        margin-top: 20px;
+    }
+    .feature {
+        width: 100%;
+        height: max-content;
+    }
+    .testimonials {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .testimonies {
+        width: 100%;
+        height: auto;
+    }
+    .testimonies p{
+        color: var(--text);
+    }
+    .contacts input,
+    .contacts textarea {
+        width: 90%;
+    }
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer p{
+        color: var(--text);
+    }
+}
