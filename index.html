@@ -6,7 +6,8 @@
     <title>SwiftMind LandingPage</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+    <!-- AOS CSS FOR ANIMATION of cards-->
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     
@@ -29,19 +30,19 @@
 
 <section id="hero">
     <div class="home">
-        <div class="text-area">
+        <div class="text-area" data-aos="slide-down" data-aos-delay="200" data-aos-duration="1000">
             <h1>Boost Your Productivity with SwiftMind</h1>
             <p>An AI-powered app designed to help you stay on top of your tasks, manage your time, and achieve more every day.</p>
             <button><a href="#">Join the Early Access List</a></button>
         </div>
-        <div class="hero-image">
+        <div class="hero-image" data-aos="slide-up" data-aos-delay="200" data-aos-duration="1000">
             <img src="images/hero-img.png" alt="her-image">
         </div>
     </div>
 </section>
 
 <section id="about">
-    <div class="about">
+    <div class="about" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
     <div class="image-about">
         <img src="images/logo.png" alt="logo">
     </div>
@@ -58,7 +59,7 @@
     <div class="title">
         <h2>Features You’ll Love</h2>
     </div>
-    <div class="feature-content">
+    <div class="feature-content" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
         <div class="feature">
         <i class="fas fa-robot"></i>
 
@@ -128,7 +129,7 @@
         <h2>What People Are Saying</h2>
     </div>
     <div class="testimonials">
-        <div class="testimonies">
+        <div class="testimonies" data-aos="flip-right" data-aos-delay="200" data-aos-duration="1000">
             <img src="images/logo.png" alt="...">
             <p>SwiftMind has already transformed the way I approach my day. 
                 It’s like having a personal assistant who never forgets!
@@ -136,7 +137,7 @@
             <h3>— John Smith, CEO of TechPioneers</h3>
         </div>
 
-        <div class="testimonies">
+        <div class="testimonies" data-aos="flip-left" data-aos-delay="200" data-aos-duration="1000">
             <img src="images/logo.png" alt="...">
             <p>I’m more productive than ever, thanks to SwiftMind’s intelligent scheduling. 
             It has become a game-changer for my business.
@@ -151,7 +152,7 @@
         <h2>Get Early Access</h2>
         <p>Sign up now to be the first to try SwiftMind and <br>take your productivity to the next level.</p>
     </div>
-    <div class="contacts">
+    <div class="contacts" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
         <form action="#">
             <input type="text" placeholder="Full Name">
             <br>
@@ -182,5 +183,10 @@
     </div>
 </footer>
     <script src="js/script.js"></script>
+     <!-- AOS JS FOR ANIMATION OF CARDS-->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 </body>
 </html>
